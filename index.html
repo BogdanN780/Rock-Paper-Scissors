@@ -4,80 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap"
+ rel="stylesheet">
 </head>
 <body>
-    <script>
-        let p = 0;
-    let c = 0;
-function getComputerChoice(){
- let choice = Math.random();
- if (choice < 0.34) {
-    return "rock";
- } else if (choice < 0.67){
-    return "paper";
- }
- else{
-    return "scissors";
- }
-}
-function playRound(playerSelection , computerSelection){
-  if (computerSelection == "rock" && playerSelection == "rock"  ) {
-    console.log("This round was a tie");
-  }
-  else if (computerSelection == "rock" && playerSelection == "paper") {
-    console.log("You won this round");
-    p++
-  }
-  else if (computerSelection == "rock" && playerSelection == "scissors" ) {
-      console.log("You lost this round");    
-      c++
-  }
-  else if (computerSelection == "paper" && playerSelection == "paper" ) {
-    console.log("This round was a tie");
-  }
-  else if (computerSelection == "paper" && playerSelection == "rock" ) {
-        console.log("You lost this round");
-        c++
-  }
-  else if (computerSelection == "paper" && playerSelection == "scissors" ) {
-       console.log("You won this round");    
-       p++
-  }
-else if (computerSelection == "scissors" && playerSelection == "rock" ) {
-      console.log("You won this round");
-      p++
-}
-else if (computerSelection == "scissors" && playerSelection == "paper" ) {
-     console.log("You lost this round");
-     c++
-}
-else if( computerSelection == "scissors" && playerSelection == "scissors") {
-    console.log("This round was a tie");   
-}
-else {
-    return alert("Please enter a correct value!");
-} 
-}
-function game(){
-   for (let i = 0; i < Infinity; i++) {
-
-    let computerSelection = getComputerChoice();
-    let playerSelection = prompt("Enter your choice here!").toLowerCase();
-    console.log("You picked " + playerSelection + " while the computer picked " + computerSelection);
-    playRound(playerSelection , computerSelection);
-    console.log("Your score is " + p + " and the computer score is " + c);
-    if (c==5) { console.log("The computer won the game!")
-      break;
-    }
-    else if (p==5) { console.log("You won the game!")
-      break;
-    }
-   }   
-}
-game();
-    </script>
+    <div class="title"> 
+        <h1>CAN YOU BEAT THE COMPUTER IN THIS GAME?</h1>
+        <h2>CHOOSE WHAT YOU WANT TO PLAY WITH!</h2>
+    </div>
+    <div class="photos">
+      <div class="button">
+        <button class="rock"><img src="rock-removebg-preview.png" alt="A rock picture" height="200px" width="200px"></button>
+        <button class="paper"><img src="paper-removebg-preview.png" alt="A paper picture" height="200px" width="180px"></button>
+        <button class="scissors"><img src="pngwing.com.png" alt="A scissors picture" height="200px" width="180px"></button>
+      </div>
+    </div>
+    <div class="score">
+        <h3>SCORE:</h3>
+    </div>
+    <div class="keep-score">
+        <h3 class="h3">YOU: <span class="youscore">0</span></h3>
+        <h3 class="h32">COMPUTER: <span class="computerscore">0</span></h3>
+    </div>
+    <p class="text"></p>
+    <p class="secondtext"></p>
     
+    
+    
+    <script src="draft.js" defer>
+    </script>
 </body>
 </html>
