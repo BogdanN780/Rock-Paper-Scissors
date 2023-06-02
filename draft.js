@@ -101,7 +101,6 @@ function getComputerChoice(){
     }
     else if(c==5){
       window.location.href= 'index3.html';
-  
     }
   }
   
